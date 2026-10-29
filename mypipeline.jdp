@@ -1,25 +1,35 @@
+
+vy
 pipeline { 
     agent any
-        stages { 
-            stage('PULL') {
-                steps { 
-                    git branch: 'main', url: 'https://github.com/Nikhilthakare2389/my-devops-project?utm_source=chatgpt.com'                    echo 'Pull Success'
-                }
-            }
-            stage('BUILD') {
-                steps { 
-                    echo 'Build Sucess'
-                }
-            }
-            stage('TEST') {
-                steps { 
-                    echo 'Test Success'
-                }
-            }
-            stage('DEPLOY') {
-                steps { 
-                    echo 'Deploy Success'
-                }
+
+    stages { 
+        stage('PULL') {
+            steps { 
+                git branch: 'main',
+                    url: 'https://github.com/Nikhilthakare2389/my-devops-project.git'
+
+                echo 'Pull Success'
             }
         }
+
+        stage('BUILD') {
+            steps { 
+                echo 'Build Success'
+            }
+        }
+
+        stage('TEST') {
+            steps { 
+                echo 'Test Success'
+            }
+        }
+
+        stage('DEPLOY') {
+            steps { 
+                echo 'Deploy Success'
+            }
+        }
+    }
 }
+```
